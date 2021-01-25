@@ -9,6 +9,7 @@ from contextlib import closing
 
 ini_text = '''
 [设置]
+#请用notepad++或者sublimeText编辑，并确保编码类型为GB2312
 #用户主页链接可以在抖音用户主页分享-》复制链接，然后粘贴在此，多用户用,分隔（英文状态下的逗号）
 用户主页列表=https://v.douyin.com/JWTACSX/,https://v.douyin.com/J76dSXL/,https://v.douyin.com/J76kbWF/
 #所有作品保存的根目录
@@ -59,7 +60,7 @@ class DouYin:
             if value:
                 self.block_count = int(value)
         except:
-            input('读取配置文件失败，请确保配置正确，按任意键继续')
+            input('读取配置文件失败，请确保配置正确，编码是否为GB2312，请使用SublimeText或NotePad++编辑，按任意键继续')
             exit(0)
 
     def hello(self):
